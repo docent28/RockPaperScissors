@@ -1,4 +1,4 @@
-fun main(args: Array<String>) {
+fun main() {
     val options = arrayOf("Камень", "Ножницы", "Бумага")
     val gameChoice = getGameChoice(options)
     val userChoice = getUserChoice(options)
@@ -30,7 +30,7 @@ fun getUserChoice(optionsParam: Array<String>): String {
         for (item in optionsParam) print(" $item")
         println(".")
 
-        val userInput = readLine()
+        val userInput = readlnOrNull()
         if (userInput != null && userInput in optionsParam) {
             isValidChoice = true
             userChoice = userInput
